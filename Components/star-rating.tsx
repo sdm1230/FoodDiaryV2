@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 
 export default function StarRating({ratings, size, gap}) {

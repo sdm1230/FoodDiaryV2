@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Card, CardItem, Thumbnail, Body, Left, Right, Button,Container, Content, Header, Footer } from 'native-base';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import CardPlace from '../CardPlace';
 
 export default class SearchTab extends Component {

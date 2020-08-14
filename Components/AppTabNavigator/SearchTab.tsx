@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, TextInput, Alert } from 'react-native';
 import { Card, CardItem, Thumbnail, Body, Left, Right, Button, Container, Content, Header, Footer, Input } from 'native-base';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import CardPlace from '../CardPlace';
 import {SearchBar} from 'react-native-elements'
 

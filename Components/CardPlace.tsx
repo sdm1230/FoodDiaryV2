@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { Card, CardItem, Thumbnail, Body, Left, Right, Button } from 'native-base';
 import { Container, Content, Header, Footer } from 'native-base';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import { ScrollView } from 'react-native-gesture-handler';
 
 import Modal from 'react-native-simple-modal';

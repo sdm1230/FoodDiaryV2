@@ -7,7 +7,8 @@ import {
 } from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 // 하단 탭에 들어갈 컴포넌트들
 import HomeTab from './AppTabNavigator/HomeTab'

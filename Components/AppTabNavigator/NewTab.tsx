@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Dimensions, Image, TextInput } from 'react-native';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 import { Container, Content, Thumbnail, Header, Left, Right, Body, Button, Item } from 'native-base';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';

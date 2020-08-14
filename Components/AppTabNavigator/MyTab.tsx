@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import { Container, Content, Thumbnail, Header, Left, Right, Body, Button } from 'native-base';
 
 const { width, height } = Dimensions.get('window');

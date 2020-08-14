@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Container, Content, Thumbnail, Header, Left, Right, Body} from 'native-base';
 import CardUser from '../CardUser';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet, Dimensions } from 'react-native';
 import { Card, CardItem, Thumbnail, Body, Left, Right, Button } from 'native-base';
 import { Container, Content, Header, Footer } from 'native-base';
-import Icon from 'react-native-ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import StarRating from './star-rating'
@@ -11,7 +11,7 @@ const { width, height } = Dimensions.get('window');
 
 export default class CardCompnent extends Component {
     state = {
-        activelike: false,
+        activelike: true,
         postList: []
     }
 
@@ -33,7 +33,7 @@ export default class CardCompnent extends Component {
             return <Icon name='ios-heart' style={{ color: "#e38e8a", fontSize: 18 }} />
         }
         else {
-            return <Icon name='ios-star' style={{ color: "#e38e8a", fontSize: 18 }} />
+            return <Icon name='ios-heart-outline' style={{ color: "#e38e8a", fontSize: 18 }} />
         }
     }
 
