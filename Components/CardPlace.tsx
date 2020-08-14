@@ -11,7 +11,19 @@ const { width, height } = Dimensions.get('window');
 
 export default class CardCompnent extends Component {
 
-    state = { open: false };
+    state = { 
+        activeLike:false,
+        open: false
+    }
+
+    IsLike(props: boolean) {
+        if (props) {
+            return <Icon name='ios-heart' style={{ color: "#e38e8a", fontSize: 18 }} />
+        }
+        else {
+            return <Icon name='ios-star' style={{ color: "#e38e8a", fontSize: 18 }} />
+        }
+    }
 
     render() {
         return (
@@ -25,7 +37,7 @@ export default class CardCompnent extends Component {
                     </Left>
                     <Body></Body>
                     <Right style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }}>
-                        <Icon name='ios-heart' style={{ fontSize: 18, color: '#e38e8a' }}></Icon>
+                        {this.IsLike(this.state.activeLike)}
                         <Text style={{ fontSize: 15, paddingHorizontal: 5 }}>찜하기</Text>
                     </Right>
                 </CardItem>

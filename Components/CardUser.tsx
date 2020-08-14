@@ -33,7 +33,7 @@ export default class CardCompnent extends Component {
             return <Icon name='ios-heart' style={{ color: "#e38e8a", fontSize: 18 }} />
         }
         else {
-            return <Icon name='ios-heart-outline' style={{ color: "#e38e8a", fontSize: 18 }} />
+            return <Icon name='ios-star' style={{ color: "#e38e8a", fontSize: 18 }} />
         }
     }
 

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Dimensions, TextInput, Alert } from 'react-nati
 import { Card, CardItem, Thumbnail, Body, Left, Right, Button, Container, Content, Header, Footer, Input } from 'native-base';
 import Icon from 'react-native-ionicons';
 import CardPlace from '../CardPlace';
+import {SearchBar} from 'react-native-elements'
 
 const { width, height } = Dimensions.get('window')
 const placeListUrl="http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/places"
@@ -10,7 +11,8 @@ const placeListUrl="http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com
 export default class SearchTab extends Component {
     state = {
         text: "",
-        placeList:[]
+        placeList:[],
+        postList:[],
     }
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
@@ -23,10 +25,17 @@ export default class SearchTab extends Component {
         console.log(responsePlaces)
         const places = await responsePlaces.json()
         console.log(places)
-        
         this.setState({
             placeList: places.data,
         })
+
+        const responsePosts = await fetch(`http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/posts`)
+            console.log(responsePosts)
+            const posts = await responsePosts.json()
+            console.log(posts)
+            this.setState({
+                postList: posts.data
+            })
         }catch(err){console.log(err)}
     }
 
