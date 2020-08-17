@@ -11,7 +11,7 @@ const { width, height } = Dimensions.get('window');
 
 export default class CardCompnent extends Component {
     state = {
-        activelike: true,
+        activelike: false,
         postList: []
     }
 

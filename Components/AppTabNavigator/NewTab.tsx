@@ -63,11 +63,11 @@ export default class NewTab extends Component {
                     </ScrollView>
 
                     <View style={{ height: (height - width) }}>
-                        <View style={{ flex: 0.5, alignItems: 'center', paddingVertical: 10, }}>
+                        <View style={{ flex: 0.5, zIndex:1, alignItems: 'center', paddingVertical: 10, }}>
                             <SearchableDropdown
                                 onTextChange={text => this.state.placeText}
                                 onItemSelect={item => JSON.stringify(this.state.placeList)}
-                                containerStyle={{width:"80%",}}
+                                containerStyle={{position:'absolute', width:"80%",}}
                                 textInputStyle={{
                                     height:30,
                                     borderWidth: 2,

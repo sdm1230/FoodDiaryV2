@@ -20,10 +20,10 @@ import MapTab from './AppTabNavigator/MapTab'
 // 하단 탭 네비게이터 생성
 const AppTabNavigator = createMaterialTopTabNavigator(
   {
-    Home :{ screen: HomeTab },
+    //Home :{ screen: HomeTab },
     Map: { screen: MapTab },
     New: { screen: NewTab },
-    Search: { screen: SearchTab },
+    //Search: { screen: SearchTab },
     My: { screen: MyTab },
   },
   {

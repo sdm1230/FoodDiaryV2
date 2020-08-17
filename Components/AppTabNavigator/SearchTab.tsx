@@ -5,21 +5,29 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import CardPlace from '../CardPlace';
 import {SearchBar} from 'react-native-elements'
 
-const { width, height } = Dimensions.get('window')
-const placeListUrl="http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/places"
+import {observer, inject, Provider} from 'mobx-react';
+//import PlaceStore from '../../store/placeStore';
+//import { observe } from 'mobx';
 
+const { width, height } = Dimensions.get('window')
+
+//@inject("PlaceStore")
+//@observer
 export default class SearchTab extends Component {
-    state = {
-        text: "",
-        placeList:[],
-        postList:[],
-    }
     static navigationOptions = {
         tabBarIcon: ({ tintColor }) => (
             <Icon name='ios-search' style={{ color: tintColor }} />
         )
     }
+    
+    state = {
+        text: "",
+        placeList:[],
+        postList:[],
+    }
+    
     async componentDidMount() {
+        
         try{
         const responsePlaces = await fetch(`http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/places`)
         console.log(responsePlaces)
@@ -28,7 +36,8 @@ export default class SearchTab extends Component {
         this.setState({
             placeList: places.data,
         })
-
+        //PlaceStore.getPlaces()
+        
         const responsePosts = await fetch(`http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/posts`)
             console.log(responsePosts)
             const posts = await responsePosts.json()
@@ -36,11 +45,13 @@ export default class SearchTab extends Component {
             this.setState({
                 postList: posts.data
             })
+        
         }catch(err){console.log(err)}
     }
 
     render() {
         return (
+            
             <Container>
                 <Header>
                     <Left style={{ flexDirection: 'row',flex:1 }}>
@@ -68,6 +79,7 @@ export default class SearchTab extends Component {
                 </Content>
 
             </Container>
+            
         );
     }
 }
