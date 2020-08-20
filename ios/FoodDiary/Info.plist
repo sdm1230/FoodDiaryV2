@@ -57,5 +57,18 @@
 	<array>
 		<string>Ionicons.ttf</string>
 	</array>
+	<!-- for camera -->
+	<!-- Required with iOS 10 and higher -->
+	<key>NSCameraUsageDescription</key>
+	<string>Your message to user when the camera is accessed for the first time</string>
+	<!-- Required with iOS 11 and higher: include this only if you are planning to use the camera roll -->
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Your message to user when the photo library is accessed for the first time</string>
+	<!-- Include this only if you are planning to use the camera roll -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Your message to user when the photo library is accessed for the first time</string>
+	<key>NSMicrophoneUsageDescription</key>
+ 	<string>$(PRODUCT_NAME) would like to use your microphone (for videos)</string>
+	<!-- /for camera -->
 </dict>
 </plist>

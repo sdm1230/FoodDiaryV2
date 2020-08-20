@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Platform,View,Text } from 'react-native';
-import {createSwitchNavigator, createAppContainer} from 'react-navigation';
-import {
-  createBottomTabNavigator,
-  createMaterialTopTabNavigator,
-} from 'react-navigation-tabs';
+import {createAppContainer} from 'react-navigation';
+import {createMaterialTopTabNavigator,} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
 // 하단 탭에 들어갈 컴포넌트들
-import HomeTab from './AppTabNavigator/HomeTab'
-import SearchTab from './AppTabNavigator/SearchTab'
+// import HomeTab from './AppTabNavigator/HomeTab'
+// import SearchTab from './AppTabNavigator/SearchTab'
 import MyTab from './AppTabNavigator/MyTab'
 import NewTab from './AppTabNavigator/NewTab'
 import MapTab from './AppTabNavigator/MapTab'

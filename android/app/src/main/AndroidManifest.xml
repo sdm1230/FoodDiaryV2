@@ -1,7 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.fooddiary">
+    
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--for camera -->
+    <!-- Required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Include this only if you are planning to use the camera roll -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--/for camera -->
 
     <application
       android:name=".MainApplication"
