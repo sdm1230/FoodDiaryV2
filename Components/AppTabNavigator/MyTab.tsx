@@ -15,13 +15,6 @@ export default class MyTab extends Component {
         userPosts: [],
     }
 
-
-    static navigationOptions = {
-        tabBarIcon: ({ tintColor }) => (
-            <Icon name='person' style={{ color: tintColor }} />
-        )
-    }
-
     async componentDidMount() {
         try{
         const responsePicture = await fetch(`http://ec2-13-209-77-96.ap-northeast-2.compute.amazonaws.com/api/users/${this.state.userId}/picture`)
@@ -129,13 +122,13 @@ export default class MyTab extends Component {
             <Container>
                 <Header>
                     <Left>
-                        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#e38e8a', paddingLeft: 15 }}>S2</Text>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#e38e8a', paddingLeft: 10 }}>S2</Text>
                     </Left>
                     <Body>
                         <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{this.state.userProfileText.username}</Text>
                     </Body>
                     <Right>
-                        <Icon name='ios-person-add' style={{ paddingRight: 10, color: '#e38e8a' }} />
+                        <Icon name='ios-settings-outline' style={{ paddingRight: 10, color: 'gray',fontSize:20 }} />
                     </Right>
                 </Header>
 
@@ -156,7 +149,7 @@ export default class MyTab extends Component {
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginRight: 10, height: 150, paddingBottom: 20 }}>
                                 <View style={{ flex: 1, alignItems: 'center' }}>
                                     <Text style={{ fontSize: 20 }}>{this.state.userProfileText.numPosts}</Text>
-                                    <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#e38e8a' }}>먹었어요</Text>
+                                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#e38e8a' }}>먹었어요</Text>
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'center' }}>
                                     <Text style={{ fontSize: 18, }}>{this.state.userProfileText.avgRating}</Text>
@@ -164,7 +157,7 @@ export default class MyTab extends Component {
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'center' }}>
                                     <Text style={{ fontSize: 20 }}>{this.state.userProfileText.numLikes}</Text>
-                                    <Text style={{ fontSize: 16, color: '#e38e8a', fontWeight: 'bold' }}>찜</Text>
+                                    <Text style={{ fontSize: 18, color: '#e38e8a', fontWeight: 'bold' }}>찜</Text>
                                 </View>
                             </View>
 
@@ -177,13 +170,13 @@ export default class MyTab extends Component {
                                 style={{ backgroundColor: 'white' }}
                                 onPress={() => this.senmentClicked(0)}
                                 active={this.state.activeIndex === 0}>
-                                <Icon name='ios-apps' style={[this.state.activeIndex === 0 ? { color: '#e38e8a' } : { color: 'grey' }]} />
+                                <Icon name='ios-apps' style={[this.state.activeIndex === 0 ? { color: '#e38e8a',fontSize:28 } : { color: 'grey',fontSize:28 }]} />
                             </Button>
                             <Button transparent
                                 style={{ backgroundColor: 'white' }}
                                 onPress={() => this.senmentClicked(1)}
                                 active={this.state.activeIndex === 1}>
-                                <Icon name='ios-heart' style={[this.state.activeIndex === 1 ? { color: '#e38e8a' } : { color: 'grey' }]} />
+                                <Icon name='ios-heart' style={[this.state.activeIndex === 1 ? { color: '#e38e8a',fontSize:28 } : { color: 'grey',fontSize:28 }]} />
                             </Button>
                         </View>
                         {this.renderSection()}
